@@ -85,6 +85,50 @@ It tracks:
 
 ---
 
+## SYSTEM ECOSYSTEM
+
+### Prime Index
+https://github.com/123AGustien/sextantprime-index
+
+### Official Index Repository
+https://github.com/123AGustien/sextant-protocol-official-index
+
+### Operations Console Repository
+https://github.com/123AGustien/sextant-resilience-operations-console
+
+### Operations Console (Live)
+https://123agustien.github.io/sextant-resilience-operations-console/
+
+### Scenario Simulator
+https://123agustien.github.io/sextant-resilience-operations-console/simulator.html
+
+### Global Macro Simulator v4
+https://123agustien.github.io/sextant-resilience-operations-console/simulator-v4/
+
+### FX Dashboard Repository
+https://github.com/123AGustien/sextant-fx-dashboard
+
+### FX Risk Dashboard (Live)
+https://123agustien.github.io/sextant-fx-dashboard/
+
+---
+
+## SYSTEM HIERARCHY
+
+SEXTANT PRIME INDEX
+
+├── Official Index Repository
+
+├── Operations Console Repository
+│   ├── Operations Console (Live)
+│   ├── Scenario Simulator
+│   └── Global Macro Simulator v4
+
+└── FX Dashboard
+    ├── Repository
+    └── Live Dashboard
+
+
 ## 7. COMMAND INTERFACE
 - RUN CONSOLE → activate execution layer  
 - RUN SIMULATION → activate scenario engine  
