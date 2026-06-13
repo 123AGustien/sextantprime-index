@@ -40,6 +40,23 @@ The system is composed of four layers:
 - SIMULATION LAYER → Scenario Simulator
 - INTERFACE LAYER → Live prototype system
 
+
+## SYSTEM ENTRY POINTS
+
+### Prime Index Repository
+https://github.com/123AGustien/sextantprime-index
+
+### Operations Console
+https://123agustien.github.io/sextant-resilience-operations-console/
+
+### Operations Repository
+https://github.com/123AGustien/sextant-resilience-operations-console
+
+### Scenario Simulator
+https://123agustien.github.io/sextant-resilience-operations-console/simulator.html
+
+### Official Index Repository
+https://github.com/123AGustien/sextant-protocol-official-index
 ---
 
 ## 4. SYSTEM STATE SIGNAL
