@@ -88,3 +88,12 @@ The purpose is to make that pressure visible.
 This repository is the PRIME INDEX layer of the Sextant Protocol architecture.
 
 All operational modules are subordinate to this structure.
+
+## SYSTEM STATE MODULE
+
+Live system state is managed in:
+
+- /system-state/current-state.md → active snapshot
+- /system-state/state-history.md → full evolution log
+
+These files define the authoritative system condition of Sextant Protocol Prime Index.
