@@ -1,52 +1,74 @@
 # SYSTEM STATE — CONTROL RULES
 
-This file defines how system state updates are generated.
+This file defines the governing logic for how Sextant Protocol system state is updated and maintained.
 
 ---
 
 ## 1. SOURCE OF TRUTH
 
-The ONLY system that can modify MACRO INDEX is:
+The Scenario Simulator is the ONLY source allowed to generate state changes.
 
-→ Scenario Simulator (external execution layer)
+All system state updates must originate from simulation outputs, not manual edits.
 
 ---
 
 ## 2. STATE UPDATE TRIGGERS
 
-State updates occur when simulator outputs:
+System state changes occur only under the following conditions:
 
-- HIGH VOLATILITY → increase MACRO INDEX
-- STABILITY → maintain or reduce MACRO INDEX
-- SHOCK EVENT → change SYSTEM STATE to VOLATILE or TRANSITION
-- RECOVERY → return to STABLE
+- HIGH VOLATILITY → increases MACRO INDEX and elevates risk state  
+- LOW VOLATILITY → stabilizes or reduces MACRO INDEX  
+- SHOCK EVENT → transitions SYSTEM STATE to VOLATILE or TRANSITION  
+- RECOVERY PHASE → returns SYSTEM STATE to STABLE  
 
 ---
 
-## 3. UPDATE ACTIONS
+## 3. UPDATE PROCESS
 
-When a trigger occurs:
+When a trigger occurs, the system must:
 
-### A. Update current-state.md
-- Replace MACRO INDEX
+### A. Update Current State File
+File: `system-state/current-state.md`
+
 - Update STATE VERSION
 - Update SYSTEM STATE
+- Update MACRO INDEX
+- Update RISK VECTOR
+- Update LAST UPDATE trigger description
 
-### B. Append to state-history.md
+---
+
+### B. Append to History Log
+File: `system-state/state-history.md`
+
 - Add new version entry
-- Include trigger event description
+- Include timestamp
+- Include trigger type
+- Record MACRO INDEX change
 
 ---
 
-## 4. VERSION RULE
+## 4. VERSION CONTROL RULE
 
-Each update increments version:
+State versions must increment sequentially:
 
-v1.0 → v1.1 → v1.2 → v2.0 (major structural change)
+- v1.0 → baseline system  
+- v1.1 → minor adjustment  
+- v1.2 → incremental shift  
+- v2.0 → structural or regime change  
 
 ---
 
-## 5. HUMAN RULE
+## 5. HUMAN OVERRIDE RULE
 
-Manual edits are allowed ONLY for documentation.
-System truth must come from simulator logic.
+Manual edits are allowed only for documentation clarity.
+
+Any change to system state must be simulation-driven to be considered valid.
+
+---
+
+## 6. SYSTEM BEHAVIOR PRINCIPLE
+
+The system is designed to reflect evolving conditions, not static assumptions.
+
+State is a function of simulated pressure, not human declaration.
